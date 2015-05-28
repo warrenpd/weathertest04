@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+<link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+<link rel="stylesheet" href="css/mjq-custom01.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/weather.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<html>
+<body>
+
+<div data-role="page" id="spageone">
+
+
+<div data-role="panel" id="smyPanel1" data-theme="a"> 
+    
+    <div data-role="main" class="ui-content">
+    <ul data-role="listview">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#pagethree">About</a></li>
+    </ul>
+  </div>
+    
+</div>
+    
+<div data-role="header">
+    <a href="#smyPanel1" class="ui-btn  ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menu</a>
+    <h1>The Weather App</h1>
+</div>
+    
+    <div data-role="main" class="ui-content">
+    
+    <div class="ui-field-contain" style="text-align: center;">
+        <input type="search" name="search" id="address" placeholder="Search for location..." data-clear-btn="true">
+        <input type="button" class="ui-btn ui-btn-b" value="Search" onclick="getlatlong()" style="text-align: center;">
+    </div>
+    
+  
+
+    <div class="ui-grid-a">
+      
+      <div data-role="main" class="ui-content" style="text-align: center;">
+        <p id="swdate" style="text-align: center;vertical-align:middle"></p>
+      </div>
+      
+      <div data-role="main" class="ui-content" style="text-align: center;">
+    <p id="sicon" style="text-align: center;vertical-align:middle"></p>
+    </div>
+ 
+    <div data-role="main" class="content" style="text-align: center;">
+    <p id="stemperature" style="text-align: center;vertical-align:middle;font-size: 30px;font-weight: bold;opacity: 0.75;color: #4797d6; height: 35px;"></p>
+    </div>
+    
+        
+    <div data-role="main" class="content" style="text-align: center;">
+   <p id="sweather" style="text-align: center;vertical-align:middle;font-size: 20px;font-weight: bold;opacity: 0.75;color: #f49926; height: 30px;"></p>
+    </div>
+        
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <p id="swspeed" style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;opacity: 0.75;color: #000000;"></p>
+      </div>
+
+      <div class="ui-block-b">
+          <p id="shumidity" style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;opacity: 0.75;color: #000000" ></p>
+      </div>
+    </div>
+      
+</div>
+
+    </div>
+    
+</div>
+
+
+    
+<div data-role="page" id="spagethree">
+    
+<div data-role="panel" id="smyPanel3" data-theme="a"> 
+    
+    <div data-role="main" class="ui-content">
+    <ul data-role="listview">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#spagethree">About</a></li>
+    </ul>
+  </div>
+    
+</div>
+    
+<div data-role="header">
+    <a href="#smyPanel3" class="ui-btn ui-corner-all ui-shadow ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menu</a>
+    <h1>The Weather App</h1>
+</div>
+    
+<div data-role="main" class="ui-content">
+<h2 style="text-align: center;vertical-align:middle;font-size: 25px;font-weight: bold;opacity: 0.75;color: #000000">Beta Version</h2>
+<p style="text-align: center;vertical-align:middle;font-size: 15px;font-weight: bold;opacity: 0.75;color: #000000" >
+
+Author: Warren Prasad<br>
+Version: 0.0.1<br>
+Applicatiom Type: Hybrid <br>
+Platform: Phonegap v 4.2.0-0.24.2<br> 
+Supporting Framework: jQuery Mobile 1.4.5; Google APIs (Maps and AJAX)<br>
+Weather API: The Dark Sky Forecast API (https://developer.forecast.io/)<br>
+Contact: warren.prasad@gmail.com
+</p>    
+</div>
+    
+</div>
+
+</body>
+</html>
